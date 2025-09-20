@@ -1,1 +1,6 @@
 rootProject.name = 'marchen-api'
+
+include 'core'
+include 'shared'
+include 'api'
+include 'consumer'
