@@ -4,7 +4,17 @@ import org.springframework.http.HttpStatusCode;
 
 public interface ErrorCode {
     HttpStatusCode getStatusCode();
-    String getType();
-    String getTitle();
-    String getDetail();
+    String name();
+
+    default String getTitle() {
+        return null;
+    }
+
+    default String getDetail() {
+        return null;
+    }
+
+    default MarchenException toException() {
+        return new MarchenException(this);
+    }
 }
