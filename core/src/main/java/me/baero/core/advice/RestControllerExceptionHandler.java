@@ -19,7 +19,7 @@ public class RestControllerExceptionHandler {
     public ProblemDetail handleIntendedException(MarchenException exception) {
         ErrorCode errorCode = exception.getErrorCode();
         ProblemDetail problemDetail = ProblemDetail.forStatus(errorCode.getStatusCode());
-        problemDetail.setType(URI.create(errorCode.getType()));
+        problemDetail.setType(URI.create(errorCode.name()));
         problemDetail.setTitle(errorCode.getTitle());
         problemDetail.setDetail(errorCode.getDetail());
 
