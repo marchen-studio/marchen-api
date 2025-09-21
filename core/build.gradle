@@ -2,6 +2,11 @@ description = 'core'
 
 dependencies {
     api 'org.springframework.boot:spring-boot-starter'
+    api 'org.springframework.boot:spring-boot-starter-web'
+    api 'org.springframework.boot:spring-boot-starter-logging'
+
+    api 'org.projectlombok:lombok:1.18.42'
+    api 'org.apache.commons:commons-lang3:3.18.0'
 
     testFixturesImplementation 'org.springframework.boot:spring-boot-starter-test'
     testFixturesImplementation 'org.junit.platform:junit-platform-launcher'
